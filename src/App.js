@@ -5,7 +5,7 @@ import axios from 'axios';
 
 class App extends Component {
   sendAPI() {
-    axios.get('http://198.211.125.38:3000/app/?SET-' + document.getElementById('input').value).then((res) => {
+    axios.get('http://198.211.125.38:3000/app/?SET-' + document.getElementById('input').value.replace('@', '')).then((res) => {
       document.getElementById('input').value = '';
     })
   }
